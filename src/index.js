@@ -1,5 +1,5 @@
 import React, { useContext, useReducer } from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 import Store from "./context";
 import reducer from "./reducer";
@@ -28,5 +28,5 @@ function App() {
   );
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
